@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
+    <title>{% block title %}{% endblock %} - Meu Perfil</title>
+    link
+</head>
+<body>
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home (Sobre Mim)</a></li>
+                <li><a href="{{ url_for('profissional') }}">Profissional</a></li>
+                <li><a href="{{ url_for('expectativas') }}">Expectativas</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Corrigido para bater com a classe .conteudo do CSS -->
+    <div class="conteudo">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
